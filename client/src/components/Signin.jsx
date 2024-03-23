@@ -421,7 +421,10 @@ import {
       },
     });
   
-  
+    const fillTestCredentials = () => {
+      setEmail("sejeban545@alibrs.com");
+      setPassword("Pass@123");
+    };
     return (
       <Modal open={true} onClose={() => dispatch(
         closeSignin()
@@ -455,6 +458,15 @@ import {
                       Sign In with Google</>
                   )}
                 </OutlinedBox>
+                
+                <OutlinedBox
+                        button={true}
+                        activeButton={disabled}
+                         style={{ margin: "12px 24px 24px 24px" }} 
+                        onClick={fillTestCredentials}
+                                  >
+                      Fill Test Credentials
+                            </OutlinedBox>
                 <Divider>
                   <Line />
                   or
